@@ -5,7 +5,9 @@ function App() {
       <header>
         <a href="/">Matilda</a>
       </header>
-      <main>list products here</main>
+      <main>
+        <h1>List products here...</h1>
+      </main>
     </div>
   );
 }
