@@ -1,15 +1,25 @@
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link } from 'react-router-dom';
+import { LinkContainer } from 'react-router-bootstrap';
 
 function Header() {
   return (
     <header>
-      <h3>
-        <Link to="/">Home</Link>
-      </h3>
+      <img
+        src="../img/logo-ok.png"
+        alt="logo"
+        style={{ width: '150px', marginTop: '1rem', marginLeft: '1rem' }}
+      />
+      <p style={{ textAlign: 'right', margin: '0px', color: 'red' }}>
+        Matilda, Matilda, Matilda, she take me money and run Venezuela !
+      </p>
+      <Navbar bg="dark" variant="dark">
+        <Container>
+          <LinkContainer to="/">
+            <Navbar.Brand>Home</Navbar.Brand>
+          </LinkContainer>
+        </Container>
+      </Navbar>
     </header>
   );
 }

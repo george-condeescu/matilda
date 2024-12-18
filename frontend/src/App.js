@@ -1,30 +1,26 @@
 import './index.css';
-
-import Header from './screns/Header';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ContractScreen from './screns/ContractScreen';
+import Container from 'react-bootstrap/esm/Container';
 
 import HomeScreen from './screns/HomeScreen';
-import ContractScreen from './screns/ContractScreen';
+import Footer from './screns/Footer';
+import Header from './screns/Header';
 
 function App() {
   return (
     <BrowserRouter>
-      <div>
-        <img
-          src="../img/logo-ok.png"
-          alt="logo"
-          style={{ width: '150px', marginTop: '1rem', marginLeft: '1rem' }}
-        />
-        <p style={{ textAlign: 'right', margin: '0px', color: 'red' }}>
-          Matilda, Matilda, Matilda, she take me money and run Venezuela !
-        </p>
+      <div className="d-flex flex-column site-container">
         <Header />
         <main>
-          <Routes>
-            <Route path="/contract/:slug" element={<ContractScreen />} />
-            <Route path="/" element={<HomeScreen />} />
-          </Routes>
+          <Container>
+            <Routes>
+              <Route path="/contract/:slug" element={<ContractScreen />} />
+              <Route path="/" element={<HomeScreen />} />
+            </Routes>
+          </Container>
         </main>
+        <Footer />
       </div>
     </BrowserRouter>
   );
